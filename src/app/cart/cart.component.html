@@ -1,0 +1,65 @@
+<ng-container *ngIf="cartList.length != 0">
+    <div class="container">
+        <div>
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of cartList">
+                            <td> <a href="/detail/{{ item.productDetail.id }}/{{ item.productDetail.shopId }}">{{
+                                    item.productDetail.title }}</a></td>
+                            <td>
+                                <img style="width: 120px" src="https://cf.shopee.in/file/{{ item.productDetail.image }}"
+                                    alt="" />
+                            </td>
+                            <td style="width: 12%">&#x20B9; {{ item.productDetail.price }}</td>
+                            <td style="width: 12%">
+                                <button class="border btn btn-xs btn-light" (click)="delfn(item.id)">-</button>
+                                <button class="border btn btn-xs btn-light">{{ item.quantity }}</button>
+                                <button class="border btn btn-xs btn-light" (click)="addfn(item.id)">+</button>
+                            </td>
+                            <th style="width: 12%">&#x20B9; {{ item.quantity * item.productDetail.price }}</th>
+                            <td>
+                                <button class="btn btn-danger" (click)="removefn(item.id)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-end">Grand Total : </td>
+                            <th colspan="2">&#x20B9; {{grandTotal}}</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-end">Discount : </td>
+                            <th colspan="2">&nbsp; 10%</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-end">Total Price : </td>
+                            <th colspan="1">&#x20B9; {{totalPricefn()}}</th>
+                            <td>
+                                <button (click)="checkOutList()" routerLink="/checkout" class="border btn btn-warning">
+                                    Check Out
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<div *ngIf="cartList.length===0" class="container">
+    <div class="alert alert-info mt-2">
+        No Products in the Cart.
+    </div>
+</div>

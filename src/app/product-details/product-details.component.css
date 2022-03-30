@@ -1,0 +1,13 @@
+.prop{
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.image{
+    margin-bottom: -13%;
+}

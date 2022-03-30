@@ -1,0 +1,38 @@
+<div class=" alert alert-warning alert-dismissible fade show text-center" role="alert">
+    <strong>Your order successfully placed!</strong>
+    <button type="button" class="btn-close text" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<ng-container *ngIf="checkoutList.length!=0">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Total Amount</th>
+                    <th scope="col">Product Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of checkoutList">
+                    <th>{{list.orderid}}</th>
+                    <td>{{list.date}} | {{list.time}}</td>
+                    <td>&#x20B9; {{list.totalprice}}</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>

@@ -1,0 +1,44 @@
+<header>
+  <div class="navbar navbar-custom navbar-dark bg-primary shadow ">
+    <div class="navbar-brand align-item-center d-flex">
+      <button routerLink="/list" class="btn btn-primary ms-2">
+        <span><i style="font-size: 30px" class="fa-solid fa-shop"></i></span>
+        <strong style="font-size: 25px; font-style: italic ;margin-left: -4px"> Shop X Clusive</strong>
+      </button>
+    </div>
+    <div class="cart-design ">
+
+      <div class="dropdown d-inline">
+        <ng-container *ngIf="logInfn()=='Login | Signup'">
+          <button routerLink="/authentication" class=" btn btn-primary">
+            <i style="font-size: 20px" class="fa-solid fa-user-lock"></i>
+            <div style="font-size: 8px" class=" mt-1 badge ">
+              {{logInfn()}}
+            </div>
+          </button>
+        </ng-container>
+        <ng-container *ngIf="logInfn()!='Login | Signup'">
+          <button class=" btn btn-primary btn dropdown-toggle" type="button" id="dropdownMenu"
+            data-bs-toggle="dropdown">
+            <i style="font-size: 25px" class="fa-solid fa-circle-user"></i>
+            <div style="font-size: 8px" class=" mt-1 badge ">
+              {{logInfn()}}
+            </div>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a style="font-size: 80%" routerLink="/checkout" class="dropdown-item" >My Orders</a></li>
+            <li><a style="font-size: 80%" (click)="logOutfn()" class="dropdown-item">
+              Logout
+            </a>
+          </li>
+          </ul>
+        </ng-container>
+      </div>
+      <button routerLink="/cart" class="btn btn-primary">
+        <i style="font-size: 20px" class="fa-solid fa-cart-shopping"></i>
+        <div style="font-size: 10px" class=" mt-1 badge ">{{getCartCount()}}</div>
+      </button>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>

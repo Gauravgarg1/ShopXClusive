@@ -1,0 +1,5 @@
+Product list - grid(bootstrap- decorate the grid) - learning ngFor -usefull for repeat(loop)
+Product detail - header tags (h1,h2) (Routes)
+Coustomer paage - login & register -(forms,validation) - (get and post calls)
+Add to cart - Loacl storage
+checkout and order 

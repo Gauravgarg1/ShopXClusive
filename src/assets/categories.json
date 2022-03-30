@@ -1,0 +1,38 @@
+[
+  {
+    "catId": 11075399,
+    "catName": "Men's Wear",
+    "image": "https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png",
+    "id": "men"
+  },
+  {
+    "catId": 11081602,
+    "catName": "Home & Furniture",
+    "image": "https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg",
+    "id": "home"
+  },
+  {
+    "catId": 11106005,
+    "catName": "Electronic Appliances",
+    "image": "https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png",
+    "id": "electric"
+  },
+  {
+    "catId": 11081327,
+    "catName": "Make & Beauty",
+    "image": "https://media.istockphoto.com/photos/makeup-bag-with-cosmetic-beauty-products-picture-id1131531862?k=20&m=1131531862&s=612x612&w=0&h=Yo6nuOrqKWVlH9YcZgwcRxEKM9HfZc3zOyDFiwPHfwY=",
+    "id": "makeup"
+  },
+  {
+    "catId": 11080727,
+    "catName": "Health & Personal Care",
+    "image": "https://www.kindpng.com/picc/m/160-1606870_personal-care-products-png-transparent-png.png",
+    "id": "care"
+  },
+  {
+    "catId": 11080919,
+    "catName": "FootWear",
+    "image": "https://m.media-amazon.com/images/I/81euNVK3zrL._UY500_.jpg",
+    "id": "footWear"
+  }
+]

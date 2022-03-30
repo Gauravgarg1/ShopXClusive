@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class=" col mt-4">
+      <h3>LogIn</h3>
+      <form (ngSubmit)="loginUserfn()" ngNativeValidate>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input type="email" required class="form-control" [(ngModel)]="loginUser.email" name="email
+          "/>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" required="true" class="form-control" [(ngModel)]="loginUser.password" name="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <div class="alert" *ngIf="error" class="alert alert-danger" role="alert">
+        {{error}}
+      </div> 
+    </div>  
+    <div class="col mt-4">
+        <h3>Register</h3>
+        <form (ngSubmit)="registerUserfn()" ngNativeValidate>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >                 
+            <input type="email" [(ngModel)]="registerUser.email" class="form-control" name="email" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" [(ngModel)]="registerUser.password" class="form-control" name="password" />
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div class="alert" *ngIf="regError" class="alert alert-danger" role="alert">
+          {{regError}}
+        </div> 
+
+    </div>
+  </div>
+</div>
